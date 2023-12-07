@@ -62,7 +62,7 @@ Create OpenAI Chat Completions API, and then configure and run the OpenAI API lo
 
 Use the terminal command to view web application:
 ```console
-streamlit run app.py
+streamlit run ./base/app.py
 ```
 
 ## Deploy Application
