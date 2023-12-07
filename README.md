@@ -1,6 +1,8 @@
 # Language Learning Chatbot
 A guide to create an application with AWS Lambda, Streamlit, Docker, and the OpenAI Chat Completions API as a language learning tool. The online web app serves as a personal Gujarati language teacher.
 
+### Demo Video: `https://www.youtube.com/watch?v=9JC8xxIKom8`
+
 This project contains source code and supporting files for a serverless application deployed with SAM CLI. It includes the following files and folders:
 
 * /base
@@ -9,8 +11,6 @@ This project contains source code and supporting files for a serverless applicat
 * events - Invocation events that you can use to invoke the function.
 * tests - Unit tests for the application code. 
 * template.yaml - A template that defines the application's AWS resources.
-
-### DEMO VIDEO: `https://www.youtube.com/watch?v=9JC8xxIKom8`
 
 ## Setup and Tools
 To use the application, you need the following tools.
