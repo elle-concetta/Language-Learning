@@ -1,0 +1,7 @@
+openai
+streamlit
+pytest
+requests
+datetime
+Pillow
+
