@@ -1,6 +1,5 @@
-openai
+openai==0.28
 streamlit
-pytest
 requests
 datetime
 Pillow
