@@ -11,22 +11,36 @@ Globals:
     Timeout: 30
     MemorySize: 2048
 
-
 Resources:
-  LanguageLearningBase:
-    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+  functionLambdaHandler:
+    Type: AWS::Serverless::Function
     Properties:
       CodeUri: base/
       Handler: function.lambda_handler
       Runtime: python3.11
+      Environment:
+        Variables:
+          API_KEY: {api-key}
       Architectures:
         - x86_64
       Events:
-        LanguageFunctionAPI:
+        lambdaFunctionAPI:
           Type: Api
           Properties:
             Path: '/base'
-            Method: GET
+            Method: ANY
             Auth:
               Authorizer: NONE
-
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action:
+                - logs:CreateLogGroup
+              Resource: arn:aws:logs:us-east-1:{}
+            - Effect: Allow
+              Action:
+                - logs:CreateLogStream
+                - logs:PutLogEvents
+              Resource:
+                - >-
+                  arn:aws:logs:us-east-1:{}:log-group:/aws/lambda/base:*
