@@ -14,7 +14,7 @@ st.image(gptimg)
 # Initialize the chat messages history with a welcome message
 if "messages" not in st.session_state:
     st.session_state.messages = [
-        {"role": "system", "content": "Welcome to the Gujarati Language Tutor. How can I assist you today?"}]
+        {"role": "system", "content": "Hi there, I’m Jolly. Welcome to the first step of your Gujarati language journey! Are you ready?"}]
 
 # Prompt for user input
 user_prompt = st.text_input("Enter your message:", key="chat_input")
