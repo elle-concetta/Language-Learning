@@ -23,7 +23,7 @@ To use the application, you need the following tools.
 
 ## Guide for Project Setup
 
-#### Prerequisites:
+### Prerequisites:
 Create an OpenAI account and generate an API key at `https://platform.openai.com/api-keys`. Then install the OpenAI library locally for the Lambda function layer. 
 ```console
 pip install --upgrade openai
@@ -34,7 +34,7 @@ Finally, in Pycharm install the AWS Toolkit by going to `Pycharm > Settings > Pl
 
 Log into AWS account and go to `IAM`, create user and install the needed permissions for application. Then create an access key and secret access key. Open up terminal and type `aws configure`, and once prompted, add all credentials.
 
-#### Create Application
+### Create Application
 Open up Pycharm IDE and create new project. Choose `AWS Serverless Application`:
 * Project Type: Zip
 * Runtime: Python3.11
@@ -58,7 +58,7 @@ Create OpenAI Chat Completions API, and then configure and run the OpenAI API lo
 ```
 * Finally, click the option `Run`.
 
-#### Streamlit Setup
+### Streamlit Setup
 
 Use the terminal command to view web application:
 ```console
