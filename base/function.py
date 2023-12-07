@@ -14,8 +14,7 @@ def lambda_handler(event, context):
         model=model_engine,
         messages=[{"role": "system", "content": "You are a personal Gujarati language teacher."},
                   {"role": "assistant", "content": "Hi there, I’m Jolly. Welcome to the first step of your "
-                                                   "Gujarati language journey! Are you ready? Or should I say "
-                                                   "'Tu taiyaar chhe?' Type 'Yes' to start your first lesson."},
+                                                   "Gujarati language journey! Are you ready?"},
                   {"role": "user", "content": prompt}]
     )
 
@@ -26,4 +25,3 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': json.dumps(text_result, ensure_ascii=False, indent=4)
     }
-
