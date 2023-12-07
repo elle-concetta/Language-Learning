@@ -88,11 +88,13 @@ The SAM CLI reads the application template to determine the API's routes and the
 
 ```yaml
       Events:
-        function:
+        LanguageFunctionAPI:
           Type: Api
           Properties:
-            Path: /hello
-            Method: get
+            Path: /base
+            Method: GET
+            Auth:
+              Authorizor: NONE
 ```
 
 ## Add a resource to your application
