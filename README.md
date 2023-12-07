@@ -4,8 +4,8 @@ A guide to create an application with AWS Lambda, Streamlit, Docker, and the Ope
 This project contains source code and supporting files for a serverless application deployed with SAM CLI. It includes the following files and folders:
 
 * /base
-  - function.py - Code for the application's Lambda function.
-  - app.py - Streamlit front-end.
+  `function.py - Code for the application's Lambda function.`
+  `app.py - Streamlit front-end.`
 * events - Invocation events that you can use to invoke the function.
 * tests - Unit tests for the application code. 
 * template.yaml - A template that defines the application's AWS resources.
