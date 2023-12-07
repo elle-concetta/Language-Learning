@@ -3,11 +3,12 @@ A guide to create a lambda function that utilizes OpenAI API Text Generation as 
 
 This project contains source code and supporting files for a serverless application deployed with SAM CLI. It includes the following files and folders:
 
-- base - Code for the application's Lambda function.
-- app.py - Code for Streamlit front-end.
-- events - Invocation events that you can use to invoke the function.
-- tests - Unit tests for the application code. 
-- template.yaml - A template that defines the application's AWS resources.
+* base
+*      function.py - Code for the application's Lambda function.
+*       app.py - Code for Streamlit front-end.
+* events - Invocation events that you can use to invoke the function.
+* tests - Unit tests for the application code. 
+* template.yaml - A template that defines the application's AWS resources.
 
 ## Setup and Tools
 To use the application, you need the following tools.
@@ -27,7 +28,9 @@ Create an OpenAI account and generate an API key at `https://platform.openai.com
 ```console
 pip install --upgrade openai
 ```
-Before moving forward with SAM CLI in Pycharm, install both AWS CLI and Docker. Then download the setup file at `aws.amazon.com/serverless/sam`, and follow the same installation process like you did above for the CLI. Finally, in Pycharm install the AWS Toolkit by going to `Pycharm > Settings > Plugins`, and then search `AWS Toolkit` and install.
+Before moving forward with SAM CLI in Pycharm, install both AWS CLI and Docker. Then download the setup file at `aws.amazon.com/serverless/sam`, and follow the same installation process like you did above for the CLI.
+
+Finally, in Pycharm install the AWS Toolkit by going to `Pycharm > Settings > Plugins`, and then search `AWS Toolkit` and install.
 
 Log into AWS account and go to `IAM`, create user and install the needed permissions for application. Then create an access key and secret access key. Open up terminal and type `aws configure`, and once prompted, add all credentials.
 
@@ -37,8 +40,18 @@ Open up Pycharm IDE and create new project. Choose `AWS Serverless Application`:
 * Runtime: Python3.11
 * SAM Template: AWS SAM Hello World
 
-Create OpenAI Chat Completions API, and then create threads for OpenAI Playground.
-
+Create OpenAI Chat Completions API, and then configure and run the OpenAI API locally:
+* Go to `Run` > `Edit Configurations`.
+* Click on `SAM CLI` and check the `Build function inside container` box.
+* Then go back to `Configuration` and add the Event Template (JSON):
+```console
+{
+  "queryStringParameters": {
+    "prompt": "Your test prompt here"
+  }
+}
+```
+* Finally, click the option `Run`.
 
 ## Deploy Application
 
