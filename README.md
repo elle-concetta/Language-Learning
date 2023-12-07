@@ -10,6 +10,8 @@ This project contains source code and supporting files for a serverless applicat
 * tests - Unit tests for the application code. 
 * template.yaml - A template that defines the application's AWS resources.
 
+### DEMO VIDEO: `https://www.youtube.com/watch?v=9JC8xxIKom8`
+
 ## Setup and Tools
 To use the application, you need the following tools.
 
